@@ -9,42 +9,44 @@
 
 ## 2. Issue list in recommended execution order
 
-| # | File | Title | Wave |
-|---|---|---|---|
-| 01 | [01-repo-scaffolding.md](issues/01-repo-scaffolding.md) | Cargo project scaffolding and CLI skeleton | 0 |
-| 02 | [02-ci-pipeline.md](issues/02-ci-pipeline.md) | CI pipeline: fmt, clippy, tests on macOS runners | 0 |
-| 03 | [03-error-and-notice-foundation.md](issues/03-error-and-notice-foundation.md) | Error taxonomy, exit-code map, notice reporting | 0 |
-| 04 | [04-config-module.md](issues/04-config-module.md) | Config module and `undo config` command | 0 |
-| 05 | [05-store-layout-and-locking.md](issues/05-store-layout-and-locking.md) | Store layout, init, permission checks, locking | 0 |
-| 06 | [06-operation-model-and-manifest.md](issues/06-operation-model-and-manifest.md) | Operation model, manifest schema, index cache | 0 |
-| 07 | [07-clonefile-backend.md](issues/07-clonefile-backend.md) | clonefile(2) snapshot backend | 1 |
-| 08 | [08-copy-fallback-backend.md](issues/08-copy-fallback-backend.md) | Bounded copy fallback backend | 1 |
-| 09 | [09-metadata-recorder.md](issues/09-metadata-recorder.md) | Metadata recorder (lstat capture, recursive walk) | 1 |
-| 10 | [10-snapshot-orchestrator.md](issues/10-snapshot-orchestrator.md) | Snapshot orchestrator: plan → committed operation | 1 |
-| 11 | [11-command-tokenizer.md](issues/11-command-tokenizer.md) | Command-line tokenizer (no-eval security boundary) | 2 |
-| 12 | [12-simple-command-extraction.md](issues/12-simple-command-extraction.md) | Simple-command extraction and head resolution | 2 |
-| 13 | [13-word-resolution.md](issues/13-word-resolution.md) | Word resolution: tilde, globs, absolutization | 2 |
-| 14 | [14-rm-analyzer.md](issues/14-rm-analyzer.md) | rm analyzer | 2 |
-| 15 | [15-mv-analyzer.md](issues/15-mv-analyzer.md) | mv analyzer | 2 |
-| 16 | [16-cp-analyzer.md](issues/16-cp-analyzer.md) | cp analyzer | 2 |
-| 17 | [17-inplace-editor-analyzer.md](issues/17-inplace-editor-analyzer.md) | sed/perl in-place analyzer | 2 |
-| 18 | [18-chmod-chown-analyzer.md](issues/18-chmod-chown-analyzer.md) | chmod/chown analyzer | 2 |
-| 19 | [19-hook-entrypoint.md](issues/19-hook-entrypoint.md) | `undo __hook` entry point (analyze→snapshot pipeline) | 3 |
-| 20 | [20-zsh-hook-script.md](issues/20-zsh-hook-script.md) | zsh hook script and `undo init zsh` | 3 |
-| 21 | [21-doctor-command.md](issues/21-doctor-command.md) | `undo doctor` | 3 |
-| 22 | [22-enable-disable-status.md](issues/22-enable-disable-status.md) | enable / disable / status commands | 3 |
-| 23 | [23-list-show-commands.md](issues/23-list-show-commands.md) | `undo list` and `undo show` | 4 |
-| 24 | [24-restore-planner.md](issues/24-restore-planner.md) | Restore planner and conflict detection | 4 |
-| 25 | [25-restore-executor.md](issues/25-restore-executor.md) | Restore executor with inverse operations | 4 |
-| 26 | [26-restore-cli.md](issues/26-restore-cli.md) | Restore CLI UX (bare `undo`, `undo <id>`) | 4 |
-| 27 | [27-gc-retention.md](issues/27-gc-retention.md) | GC, retention enforcement, index self-heal | 4 |
-| 28 | [28-purge-command.md](issues/28-purge-command.md) | `undo purge` | 4 |
-| 29 | [29-fuzz-targets.md](issues/29-fuzz-targets.md) | Fuzz targets for parser boundary + CI smoke | 5 |
-| 30 | [30-supply-chain-and-security-docs.md](issues/30-supply-chain-and-security-docs.md) | cargo-audit/deny gates, SECURITY.md | 5 |
-| 31 | [31-e2e-acceptance-suite.md](issues/31-e2e-acceptance-suite.md) | End-to-end acceptance scenario suite | 5 |
-| 32 | [32-readme-and-project-docs.md](issues/32-readme-and-project-docs.md) | README, CONTRIBUTING, LICENSE | 5 |
-| 33 | [33-release-workflow.md](issues/33-release-workflow.md) | Release workflow: universal binary, checksums, provenance | 5 |
-| 34 | [34-homebrew-tap.md](issues/34-homebrew-tap.md) | Homebrew tap formula and publication handoff | 5 |
+GitHub Issues #1–#34 were created 2026-07-07 from these drafts (1:1, `NN` == `#N`). On divergence, update the draft here first and treat the GitHub Issue as stale.
+
+| # | File | Title | Wave | GitHub |
+|---|---|---|---|---|
+| 01 | [01-repo-scaffolding.md](issues/01-repo-scaffolding.md) | Cargo project scaffolding and CLI skeleton | 0 | [#1](https://github.com/Saber5656/undo/issues/1) |
+| 02 | [02-ci-pipeline.md](issues/02-ci-pipeline.md) | CI pipeline: fmt, clippy, tests on macOS runners | 0 | [#2](https://github.com/Saber5656/undo/issues/2) |
+| 03 | [03-error-and-notice-foundation.md](issues/03-error-and-notice-foundation.md) | Error taxonomy, exit-code map, notice reporting | 0 | [#3](https://github.com/Saber5656/undo/issues/3) |
+| 04 | [04-config-module.md](issues/04-config-module.md) | Config module and `undo config` command | 0 | [#4](https://github.com/Saber5656/undo/issues/4) |
+| 05 | [05-store-layout-and-locking.md](issues/05-store-layout-and-locking.md) | Store layout, init, permission checks, locking | 0 | [#5](https://github.com/Saber5656/undo/issues/5) |
+| 06 | [06-operation-model-and-manifest.md](issues/06-operation-model-and-manifest.md) | Operation model, manifest schema, index cache | 0 | [#6](https://github.com/Saber5656/undo/issues/6) |
+| 07 | [07-clonefile-backend.md](issues/07-clonefile-backend.md) | clonefile(2) snapshot backend | 1 | [#7](https://github.com/Saber5656/undo/issues/7) |
+| 08 | [08-copy-fallback-backend.md](issues/08-copy-fallback-backend.md) | Bounded copy fallback backend | 1 | [#8](https://github.com/Saber5656/undo/issues/8) |
+| 09 | [09-metadata-recorder.md](issues/09-metadata-recorder.md) | Metadata recorder (lstat capture, recursive walk) | 1 | [#9](https://github.com/Saber5656/undo/issues/9) |
+| 10 | [10-snapshot-orchestrator.md](issues/10-snapshot-orchestrator.md) | Snapshot orchestrator: plan → committed operation | 1 | [#10](https://github.com/Saber5656/undo/issues/10) |
+| 11 | [11-command-tokenizer.md](issues/11-command-tokenizer.md) | Command-line tokenizer (no-eval security boundary) | 2 | [#11](https://github.com/Saber5656/undo/issues/11) |
+| 12 | [12-simple-command-extraction.md](issues/12-simple-command-extraction.md) | Simple-command extraction and head resolution | 2 | [#12](https://github.com/Saber5656/undo/issues/12) |
+| 13 | [13-word-resolution.md](issues/13-word-resolution.md) | Word resolution: tilde, globs, absolutization | 2 | [#13](https://github.com/Saber5656/undo/issues/13) |
+| 14 | [14-rm-analyzer.md](issues/14-rm-analyzer.md) | rm analyzer | 2 | [#14](https://github.com/Saber5656/undo/issues/14) |
+| 15 | [15-mv-analyzer.md](issues/15-mv-analyzer.md) | mv analyzer | 2 | [#15](https://github.com/Saber5656/undo/issues/15) |
+| 16 | [16-cp-analyzer.md](issues/16-cp-analyzer.md) | cp analyzer | 2 | [#16](https://github.com/Saber5656/undo/issues/16) |
+| 17 | [17-inplace-editor-analyzer.md](issues/17-inplace-editor-analyzer.md) | sed/perl in-place analyzer | 2 | [#17](https://github.com/Saber5656/undo/issues/17) |
+| 18 | [18-chmod-chown-analyzer.md](issues/18-chmod-chown-analyzer.md) | chmod/chown analyzer | 2 | [#18](https://github.com/Saber5656/undo/issues/18) |
+| 19 | [19-hook-entrypoint.md](issues/19-hook-entrypoint.md) | `undo __hook` entry point (analyze→snapshot pipeline) | 3 | [#19](https://github.com/Saber5656/undo/issues/19) |
+| 20 | [20-zsh-hook-script.md](issues/20-zsh-hook-script.md) | zsh hook script and `undo init zsh` | 3 | [#20](https://github.com/Saber5656/undo/issues/20) |
+| 21 | [21-doctor-command.md](issues/21-doctor-command.md) | `undo doctor` | 3 | [#21](https://github.com/Saber5656/undo/issues/21) |
+| 22 | [22-enable-disable-status.md](issues/22-enable-disable-status.md) | enable / disable / status commands | 3 | [#22](https://github.com/Saber5656/undo/issues/22) |
+| 23 | [23-list-show-commands.md](issues/23-list-show-commands.md) | `undo list` and `undo show` | 4 | [#23](https://github.com/Saber5656/undo/issues/23) |
+| 24 | [24-restore-planner.md](issues/24-restore-planner.md) | Restore planner and conflict detection | 4 | [#24](https://github.com/Saber5656/undo/issues/24) |
+| 25 | [25-restore-executor.md](issues/25-restore-executor.md) | Restore executor with inverse operations | 4 | [#25](https://github.com/Saber5656/undo/issues/25) |
+| 26 | [26-restore-cli.md](issues/26-restore-cli.md) | Restore CLI UX (bare `undo`, `undo <id>`) | 4 | [#26](https://github.com/Saber5656/undo/issues/26) |
+| 27 | [27-gc-retention.md](issues/27-gc-retention.md) | GC, retention enforcement, index self-heal | 4 | [#27](https://github.com/Saber5656/undo/issues/27) |
+| 28 | [28-purge-command.md](issues/28-purge-command.md) | `undo purge` | 4 | [#28](https://github.com/Saber5656/undo/issues/28) |
+| 29 | [29-fuzz-targets.md](issues/29-fuzz-targets.md) | Fuzz targets for parser boundary + CI smoke | 5 | [#29](https://github.com/Saber5656/undo/issues/29) |
+| 30 | [30-supply-chain-and-security-docs.md](issues/30-supply-chain-and-security-docs.md) | cargo-audit/deny gates, SECURITY.md | 5 | [#30](https://github.com/Saber5656/undo/issues/30) |
+| 31 | [31-e2e-acceptance-suite.md](issues/31-e2e-acceptance-suite.md) | End-to-end acceptance scenario suite | 5 | [#31](https://github.com/Saber5656/undo/issues/31) |
+| 32 | [32-readme-and-project-docs.md](issues/32-readme-and-project-docs.md) | README, CONTRIBUTING, LICENSE | 5 | [#32](https://github.com/Saber5656/undo/issues/32) |
+| 33 | [33-release-workflow.md](issues/33-release-workflow.md) | Release workflow: universal binary, checksums, provenance | 5 | [#33](https://github.com/Saber5656/undo/issues/33) |
+| 34 | [34-homebrew-tap.md](issues/34-homebrew-tap.md) | Homebrew tap formula and publication handoff | 5 | [#34](https://github.com/Saber5656/undo/issues/34) |
 
 ## 3. Dependency table
 
@@ -85,7 +87,7 @@
 ## 4. Implementation waves
 
 | Wave | Issues | Goal | Parallelism |
-|---|---|---|---|
+|---|---|---|---|---|
 | 0 Foundations | 01–06 | Buildable binary, config, store, manifests | 03→04/05 fan-out; 06 joins |
 | 1 Snapshot engine | 07–10 | Committed operations from synthetic plans | 07/08/09 parallel |
 | 2 Analysis | 11–18 | Command text → SnapshotPlan | 14–18 fully parallel after 13 |
