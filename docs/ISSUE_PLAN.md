@@ -58,26 +58,27 @@
 | 06 | 04, 05 | manifest+index write/read path |
 | 07 | 05 | |
 | 08 | 04, 05 | caps from config |
-| 09 | 04 | entry caps |
+| 09 | 04 | shares walk/budget types with 07 — coordinate landing order |
 | 10 | 06, 07, 08, 09 | |
 | 11 | 03 | |
 | 12 | 11 | |
 | 13 | 04, 12 | excludes from config |
-| 14–18 | 13 | independent of each other; parallelizable |
+| 14 | 13 | lands the shared analyzer trait + test harness |
+| 15–18 | 13, 14 | reuse 14's trait/harness; parallelizable with each other once 14 lands |
 | 19 | 10, 14–18 | |
 | 20 | 19 | includes U1/U3 probes |
-| 21 | 05, 04, 20 | checks hook artifacts |
-| 22 | 04, 20 | |
+| 21 | 04, 05, 07, 20 | reuses 07's clone-capability probe; checks hook artifacts |
+| 22 | 04, 06, 19, 20 | status reads the index; disable gate lives in 19 |
 | 23 | 06 | parallel with wave-2/3 after 06 |
 | 24 | 06 | pure logic vs manifests |
-| 25 | 10, 24 | inverse ops reuse orchestrator |
+| 25 | 07, 08, 10, 24 | inverse ops reuse orchestrator; payload I/O via 07/08 |
 | 26 | 25 | |
-| 27 | 06 | EX-lock interplay tested with 25 present |
-| 28 | 27 | shares eviction machinery |
-| 29 | 14–18 | fuzzes lexer+analyzers |
+| 27 | 05, 06 | EX-lock interplay tested with 25 present; replaces 10's auto-GC stub |
+| 28 | 06, 27 | shares eviction machinery |
+| 29 | 11–18 | fuzzes lexer+analyzers |
 | 30 | 02 | |
-| 31 | 20, 26, 27, 28, 21, 22 | whole-product matrix |
-| 32 | 26 (behavioral accuracy), 30 (SECURITY.md exists) | LICENSE needs product-owner confirmation |
+| 31 | 20, 21, 22, 26, 27, 28 | whole-product matrix |
+| 32 | 21, 26, 30 | LICENSE needs product-owner confirmation |
 | 33 | 02, 31 | release gate = acceptance green |
 | 34 | 33 | needs a published release artifact; tap repo creation is a product-owner manual step |
 
